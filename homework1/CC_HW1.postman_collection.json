@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "10a733a1-4198-47be-9f97-8003f83a8c57",
+		"name": "CC_HW1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20810695"
+	},
+	"item": [
+		{
+			"name": "/api/books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"title\": \"Harry Potter and the Philosopher's Stone\",\r\n    \"author\": \"J. K. Rowling\",\r\n    \"publicationYear\": 1997,\r\n    \"shortDescription\": \"Harry Potter lives with his abusive aunt and uncle, Vernon and Petunia Dursley, and their bullying son, Dudley. On Harry's eleventh birthday, a half-giant named Rubeus Hagrid personally delivers an acceptance letter to Hogwarts School of Witchcraft and Wizardry, revealing that Harry's parents, James and Lily Potter, were wizards. When Harry was one year old, an evil and powerful dark wizard, Lord Voldemort, murdered his parents. Harry survived Voldemort's killing curse that rebounded and seemingly destroyed the Dark Lord, leaving a lightning bolt-shaped scar on his forehead. Unknown to Harry, this act made him famous in the wizarding world.\",\r\n    \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Chamber of Secrets\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 1998,\r\n        \"shortDescription\": \"While spending the summer at the Dursleys, twelve-year-old Harry Potter is visited by a house-elf named Dobby. He warns that Harry is in danger and must not return to Hogwarts. Harry refuses, so Dobby magically ruins Aunt Petunia and Uncle Vernon's dinner party. A furious Uncle Vernon locks Harry into his room in retaliation. The Ministry of Magic immediately sends a notice accusing Harry of performing underage magic and threatening dismissal from Hogwarts.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Prisoner of Azkaban\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 1999,\r\n        \"shortDescription\": \"While living with the Dursleys, Harry accidentally loses his temper and ends up inflating his Aunt Marge for insulting his parents. He packs up and leaves the house, choosing to spend the summer at the Leaky Cauldron inn in London. While there, Harry is warned that a former follower of Voldemort, named Sirius Black, is seeking him out after having escaped from the wizard prison, Azkaban.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Goblet of Fire\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 2000,\r\n        \"shortDescription\": \"Over the summer, the Weasleys invite Harry Potter to attend the Quidditch World Cup final, played between Bulgaria and Ireland. The match ends in a victory for the Irish, but the campsite is attacked by Voldemort's former followers called the Death Eaters. Despite no one being killed, the Death Eaters set off the Dark Mark to cause a panic.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Order of the Phoenix\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 2003,\r\n        \"shortDescription\": \"During the summer, Harry Potter is left frustrated by his lack of involvement in Dumbledore's efforts to combat a newly-resurgent Lord Voldemort. One evening, he is attacked by Dementors, causing a group of wizards belonging to the Order of the Phoenix, to evacuate him from the Dursley residence. They whisk him off to Number 12, Grimmauld Place, Sirius Black's childhood home, which is now headquarters for the Order. Harry learns from Ron and Hermione, that the Order is a secret organisation created by Dumbledore, dedicated to fighting Voldemort and the Death Eaters. Harry wants to join, but Ron's mother, Molly disapproves.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Half-Blood Prince\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 2005,\r\n        \"shortDescription\": \"Following his godfather Sirius Black's death, Harry is visited by Dumbledore, who escorts him to the home of the Weasleys. They take a detour to meet Horace Slughorn, whom Dumbledore wishes to return to Hogwarts school to teach Potions. Slughorn is reluctant but agrees after realising he will teach the famous Harry Potter.At Hogwarts, Severus Snape is announced as the new Defence Against the Dark Arts instructor. Harry, who had neglected to buy Potions supplies, must borrow an old textbook to attend Slughorn's class. He finds an old, tattered book bearing the inscription 'The Half-Blood Prince.' Harry notices that the scribbled tips inside the book yield better results than the printed instruction and continues to use the book afterward. He rises to the top of the class, with Slughorn attributing his Potions skill to be a trait inherited from his mother Lily.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Deathly Hallows\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 2007,\r\n        \"shortDescription\": \"At the beginning of the book, Harry is about to turn seventeen and will lose his deceased mother's protection. Members of the Order of the Phoenix relocate the Dursleys, and prepare to move Harry to The Burrow by flying him there, using Harry's friends as decoys. Death Eaters attack them upon departure, and in the ensuing battle, \\\"Mad-Eye\\\" Moody and Hedwig are killed while George Weasley is wounded. Voldemort arrives to kill Harry, but Harry's wand fends him off on its own.\",\r\n        \"genre\": \"Fantasy\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/books",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/books/6405e68b61c099c28814a1c2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7777/books/64063e2bd720f87d0b4b1d90",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"books",
+						"64063e2bd720f87d0b4b1d90"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/books/add-list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"title\": \"Harry Potter and the Chamber of Secrets\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 1998,\r\n        \"shortDescription\": \"While spending the summer at the Dursleys, twelve-year-old Harry Potter is visited by a house-elf named Dobby. He warns that Harry is in danger and must not return to Hogwarts. Harry refuses, so Dobby magically ruins Aunt Petunia and Uncle Vernon's dinner party. A furious Uncle Vernon locks Harry into his room in retaliation. The Ministry of Magic immediately sends a notice accusing Harry of performing underage magic and threatening dismissal from Hogwarts.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Prisoner of Azkaban\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 1999,\r\n        \"shortDescription\": \"While living with the Dursleys, Harry accidentally loses his temper and ends up inflating his Aunt Marge for insulting his parents. He packs up and leaves the house, choosing to spend the summer at the Leaky Cauldron inn in London. While there, Harry is warned that a former follower of Voldemort, named Sirius Black, is seeking him out after having escaped from the wizard prison, Azkaban.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Goblet of Fire\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 2000,\r\n        \"shortDescription\": \"Over the summer, the Weasleys invite Harry Potter to attend the Quidditch World Cup final, played between Bulgaria and Ireland. The match ends in a victory for the Irish, but the campsite is attacked by Voldemort's former followers called the Death Eaters. Despite no one being killed, the Death Eaters set off the Dark Mark to cause a panic.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Order of the Phoenix\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 2003,\r\n        \"shortDescription\": \"During the summer, Harry Potter is left frustrated by his lack of involvement in Dumbledore's efforts to combat a newly-resurgent Lord Voldemort. One evening, he is attacked by Dementors, causing a group of wizards belonging to the Order of the Phoenix, to evacuate him from the Dursley residence. They whisk him off to Number 12, Grimmauld Place, Sirius Black's childhood home, which is now headquarters for the Order. Harry learns from Ron and Hermione, that the Order is a secret organisation created by Dumbledore, dedicated to fighting Voldemort and the Death Eaters. Harry wants to join, but Ron's mother, Molly disapproves.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Half-Blood Prince\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 2005,\r\n        \"shortDescription\": \"Following his godfather Sirius Black's death, Harry is visited by Dumbledore, who escorts him to the home of the Weasleys. They take a detour to meet Horace Slughorn, whom Dumbledore wishes to return to Hogwarts school to teach Potions. Slughorn is reluctant but agrees after realising he will teach the famous Harry Potter.At Hogwarts, Severus Snape is announced as the new Defence Against the Dark Arts instructor. Harry, who had neglected to buy Potions supplies, must borrow an old textbook to attend Slughorn's class. He finds an old, tattered book bearing the inscription 'The Half-Blood Prince.' Harry notices that the scribbled tips inside the book yield better results than the printed instruction and continues to use the book afterward. He rises to the top of the class, with Slughorn attributing his Potions skill to be a trait inherited from his mother Lily.\",\r\n        \"genre\": \"Fantasy\"\r\n    },\r\n    {\r\n        \"title\": \"Harry Potter and the Deathly Hallows\",\r\n        \"author\": \"J. K. Rowling\",\r\n        \"publicationYear\": 2007,\r\n        \"shortDescription\": \"At the beginning of the book, Harry is about to turn seventeen and will lose his deceased mother's protection. Members of the Order of the Phoenix relocate the Dursleys, and prepare to move Harry to The Burrow by flying him there, using Harry's friends as decoys. Death Eaters attack them upon departure, and in the ensuing battle, \\\"Mad-Eye\\\" Moody and Hedwig are killed while George Weasley is wounded. Voldemort arrives to kill Harry, but Harry's wand fends him off on its own.\",\r\n        \"genre\": \"Fantasy\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/api/books/add-list",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"books",
+						"add-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/books/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"64063ef88181986fcb724db7\",\r\n    \"title\": \"Harry Potter and the Philosopher's Stone\",\r\n    \"author\": \"J. K. Rowling\",\r\n    \"publicationYear\": 1997,\r\n    \"shortDescription\": \"Harry Potter lives with his abusive aunt and uncle, Vernon and Petunia Dursley, and their bullying son, Dudley. On Harry's eleventh birthday, a half-giant named Rubeus Hagrid personally delivers an acceptance letter to Hogwarts School of Witchcraft and Wizardry, revealing that Harry's parents, James and Lily Potter, were wizards. When Harry was one year old, an evil and powerful dark wizard, Lord Voldemort, murdered his parents. Harry survived Voldemort's killing curse that rebounded and seemingly destroyed the Dark Lord, leaving a lightning bolt-shaped scar on his forehead. Unknown to Harry, this act made him famous in the wizarding world.\",\r\n    \"genre\": \"Fantasy\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/books/add",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"books",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/books/update/6405e68b61c099c28814a1c2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Harry Potter and the Philosopher's Stone updated\",\r\n    \"author\": \"J. K. Rowling\",\r\n    \"publicationYear\": 1997,\r\n    \"shortDescription\": \"Harry Potter lives with his abusive aunt and uncle, Vernon and Petunia Dursley, and their bullying son, Dudley. On Harry's eleventh birthday, a half-giant named Rubeus Hagrid personally delivers an acceptance letter to Hogwarts School of Witchcraft and Wizardry, revealing that Harry's parents, James and Lily Potter, were wizards. When Harry was one year old, an evil and powerful dark wizard, Lord Voldemort, murdered his parents. Harry survived Voldemort's killing curse that rebounded and seemingly destroyed the Dark Lord, leaving a lightning bolt-shaped scar on his forehead. Unknown to Harry, this act made him famous in the wizarding world.\",\r\n    \"genre\": \"Fantasy\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/books/update/64063ef88181986fcb724db7",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"books",
+						"update",
+						"64063ef88181986fcb724db7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/books/update-all",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"title1\",\r\n        \"author\": \"author1\",\r\n        \"publicationYear\": 2000,\r\n        \"shortDescription\": \"description1\",\r\n        \"genre\": \"Fantasy\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/books/update-all",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"books",
+						"update-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/books/remove/6405e68b61c099c28814a1c2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7777/books/remove/64063ef88181986fcb724db7",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"books",
+						"remove",
+						"64063ef88181986fcb724db7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/books/remove-all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7777/books/remove-all",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"books",
+						"remove-all"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "6405e8c5d1451f0401f7f834"
+		}
+	]
+}
