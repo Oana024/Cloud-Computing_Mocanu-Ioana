@@ -1,6 +1,5 @@
 const {MongoClient, ObjectId} = require("mongodb");
 const http = require("http");
-const uri = "mongodb+srv://oana:1234@cluster0.qxwc2ip.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 
 let conn;
