@@ -1,0 +1,13 @@
+.container-fluid{
+    height: 600px;
+    text-align: center;
+    align-items: center;
+}
+#button {
+    margin-top: 150px;
+    margin-bottom: 10px;
+}
+
+.nr{
+    font-weight: bold;
+}

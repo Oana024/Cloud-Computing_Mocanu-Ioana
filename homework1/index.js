@@ -1,5 +1,7 @@
 const {MongoClient, ObjectId} = require("mongodb");
 const http = require("http");
+const config = require('config');
+const uri = config.get('database.uri');
 const client = new MongoClient(uri);
 
 let conn;
