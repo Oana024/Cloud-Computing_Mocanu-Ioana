@@ -18,7 +18,6 @@ const Home = () => {
         }
     }
 
-
     return (
         <div className="container-fluid">
             <button id="button" className="btn btn-dark" onClick={generateFact}>Click me</button><br></br>

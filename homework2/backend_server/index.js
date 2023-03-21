@@ -27,11 +27,12 @@ app.get('/books', (req, res) => {
 
         response.on('end', () => {
             let booksArray = JSON.parse(books);
-            res.send(booksArray);
+            res.status(200).send(booksArray);
         });
     });
 
     request.on('error', (error) => {
+        res.status(500).send();
         console.error(error);
     });
 
@@ -52,13 +53,13 @@ app.get('/books/:id', (req, res) => {
 
         response.on('end', () => {
             let myBook = JSON.parse(book);
-            console.log(myBook.author)
             res.send(myBook);
         });
 
     });
 
     request.on('error', (error) => {
+        res.status(500).send();
         console.error(error);
     });
 
@@ -71,40 +72,49 @@ app.post('/books/add', jsonParser, async (req, res) => {
         method: "POST",
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(req.body)
-    }).then((response) => response.json())
-        .then((json) => console.log(json));
+    });
 
-    res.status(201).json("Item inserted successfully");
+    if(result.status === 201){
+        res.status(201).send();
+    } else{
+        res.status(500).send();
+    }
 });
 
 app.delete('/books/remove/:id', async (req, res) => {
     const id = req.params.id;
 
-    await fetch(`http://localhost:7777/api/books/remove/${id}`, {
+    let result = await fetch(`http://localhost:7777/api/books/remove/${id}`, {
         method: "DELETE",
-    }).then((response) =>
-        res.status(response.status)
-    )
-    res.end();
+    });
+
+    if(result.status === 200){
+        res.status(200).send();
+    } else{
+        res.status(500).send();
+    }
 });
 
 app.put('/books/update/:id', jsonParser, async (req, res) => {
     const id = req.params.id;
 
-    await fetch(`http://localhost:7777/api/books/update/${id}`, {
+    let result = await fetch(`http://localhost:7777/api/books/update/${id}`, {
         method: "PUT",
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(req.body)
-    }).then((response) =>
-        console.log(response.status),
-    )
-    res.end()
+    });
+
+    if(result.status === 200){
+        res.status(200).send();
+    } else{
+        res.status(500).send();
+    }
 });
 
 app.get('/define/:word', async (req, res) => {
     const word = req.params.word;
 
-    console.log(word);
+    //console.log(word);
 
     const options = {
         method: 'GET',
@@ -121,13 +131,13 @@ app.get('/define/:word', async (req, res) => {
         }
     }).catch(function (error) {
         console.error(error);
-        res.status(400).send("bad request");
+        res.status(400).send();
     });
 });
 
 app.get('/number-fact/:number', (req, res) => {
     const number = req.params.number;
-    console.log(number);
+   // console.log(number);
 
     const options = {
         method: 'GET',
@@ -140,9 +150,9 @@ app.get('/number-fact/:number', (req, res) => {
     };
 
     axios.request(options).then(function (response) {
-        console.log(response.data);
         res.status(200).send(response.data);
     }).catch(function (error) {
+        res.status(500).send();
         console.error(error);
     });
 })
